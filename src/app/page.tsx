@@ -1,11 +1,10 @@
 import Image from "next/image";
-import Header from "@/components/Header."  // Ensure no trailing period
-import Footer from "@/components/Footer";  // Ensure no trailing period
+
 
 export default function Home() {
   return (
     <div className="h-screen bg-yellow-100">
-      <Header />
+  
 
       <div className="container mx-auto p-8 flex flex-col lg:flex-row justify-between items-center mt-20">
         <div className="intro max-w-md">
@@ -14,11 +13,11 @@ export default function Home() {
           </p>
         </div>
         <div className="profilePic mt-8 lg:mt-0">
-          <Image src="/image10.png" alt="profile" height={400} width={400} />
+          <img src="/image10.png" alt="profile" height={400} width={400} />
         </div>
       </div>
 
-      <Footer /> 
+
     </div>
   );
 }

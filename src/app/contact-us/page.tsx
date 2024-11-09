@@ -1,10 +1,9 @@
-import Header from "@/components/Header.";
-import Link from "next/link";
+
 
 export default function Contact() {
   return (
     <div className="h-screen bg-yellow-100">
-      <Header />
+      
       <section className="max-w-3xl mx-auto p-8 bg-white shadow-lg rounded-lg mt-12">
         <h2 className="text-3xl font-semibold text-gray-900 text-center mb-8">Contact Form</h2>
         
