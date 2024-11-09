@@ -62,7 +62,11 @@ const data: Data[] = [
 
 const BlogPage = ({ params }: { params: { id: string } }) => {
   const { id } = params;
-  const b = data.find((i) => i.id === parseInt(id));
+  const b = data.find((i) => i.id === Number(id));
+
+  if (!b) {
+    return <div>Blog post not found</div>;
+  }
 
   return (
     <div className="max-w-4xl mx-auto p-6 bg-gradient-to-br from-pink-200 via-purple-200 to-indigo-200 shadow-2xl rounded-lg">
