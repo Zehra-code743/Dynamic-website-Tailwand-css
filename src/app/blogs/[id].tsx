@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { useRouter } from "next/router";
 
 type Data = {
   id: number;
@@ -61,18 +60,12 @@ const data: Data[] = [
   },
 ];
 
-const BlogPage = () => {
-  const router = useRouter();
-  const { id } = router.query;
-
-  if (!id) {
-    return <div>Loading...</div>;
-  }
-
+const BlogPage = ({ params }: { params: { id: string } }) => {
+  const { id } = params;
   const b = data.find((i) => i.id === Number(id));
 
   if (!b) {
-    return <div>Blog post not found</div>;
+    return <div>Blog post not fou</div>
   }
 
   return (
