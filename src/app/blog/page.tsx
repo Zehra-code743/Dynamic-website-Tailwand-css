@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-// Define the data type for blog posts
+
 type IData = {
   id: number;
   title: string;
@@ -8,7 +8,7 @@ type IData = {
   imageUrl: string;
 };
 
-// Sample data for the blog posts
+
 const data: IData[] = [
   {
     id: 1,
@@ -48,15 +48,15 @@ const data: IData[] = [
   },
 ];
 
-// Main Blogs Component
+
 export default function Blogs() {
   return (
     <div className="container mx-auto py-8">
-      {/* Render each blog post */}
+      
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {data.map((idata) => (
           <div key={idata.id} className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
-            {/* Image Section */}
+            
             <div className="relative h-48 mb-4">
               <img
                 src={idata.imageUrl}
@@ -64,11 +64,11 @@ export default function Blogs() {
                 className="w-full h-full object-cover rounded-lg"
               />
             </div>
-            {/* Title */}
+      
             <h2 className="text-2xl font-semibold text-gray-800">{idata.title}</h2>
-            {/* Description */}
+            
             <p className="text-gray-600 mt-2">{idata.description}</p>
-            {/* Read More Button */}
+        
             <Link href={`/blogs/${idata.id}`}>
               <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-200 ease-in-out">
                 Read More
